@@ -1,0 +1,62 @@
+@use '@abstracts/variables' as v;
+@use '@abstracts/mixins' as mx;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+
+    &__nav {
+        
+        ul {
+            display: flex;
+            justify-content: space-between;
+            gap: 48px;
+
+            li {
+                @include mx.reset-list;
+
+                &:nth-child(3) a:link:not(.active):hover::before {
+                    right: 2px;
+                }
+
+                &:nth-child(3) a.active::before {
+                    right: 2px;
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+            
+            a:link:not(.active) {
+                color: v.$gray;
+                position: relative;
+            
+                &:hover::before {
+                    @include mx.active-link;
+                    content: '';
+                    position: absolute;
+                    top: 30px;
+                    right: 17px;
+                }
+            }
+
+
+
+            a.active {
+                color: v.$white;
+                position: relative;
+
+                &::before {
+                    @include mx.active-link;
+                    content: '';
+                    position: absolute;
+                    top: 30px;
+                    right: 17px;
+                }
+            }
+        }
+    }
+}

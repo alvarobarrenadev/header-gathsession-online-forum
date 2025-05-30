@@ -25,3 +25,16 @@
     }
   }
 }
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin active-link {
+  width: 30px;
+  height: 4px;
+  background-color: v.$pink;
+  border-radius: 6px;
+}
