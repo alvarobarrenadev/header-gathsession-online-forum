@@ -38,3 +38,20 @@
   background-color: v.$pink;
   border-radius: 6px;
 }
+
+@mixin button--primary {
+  display: inline-block;
+  background-color: v.$pink;
+  color: v.$white;
+  padding: 12px 70px;
+  border-radius: 16px 16px 16px 0px;
+  font-weight: 400;
+  text-decoration: none;
+  box-shadow: 0px 24px 50px 0px rgba(0, 0, 0, 0.10);
+}
+
+@mixin button--secondary {
+  color: v.$white;
+  font-weight: 600;
+  text-decoration: underline;
+}

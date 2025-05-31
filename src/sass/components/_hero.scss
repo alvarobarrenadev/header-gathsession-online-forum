@@ -1,0 +1,66 @@
+@use '@abstracts/variables' as v;
+
+.hero {
+    display: flex;
+    gap: 40px;
+
+    &__content {
+        max-width: 50%;
+
+        &--title {
+            color: v.$white;
+            font-family: v.$merriweather-font;
+            font-size: 75px;
+            margin-bottom: 25px;
+        }
+
+        &--description {
+            color: v.$gray;
+            font-size: 20px;
+            line-height: 35px;
+            font-weight: 400;
+            max-width: 85%;
+            margin-bottom: 32px;
+        }
+
+        &_actions {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            margin-bottom: 150px;
+        }
+
+        &_features {
+            display: flex;
+            gap: 48px;
+
+            .hero__feature {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                color: v.$white;
+                font-weight: 600;
+
+                img {
+                    background: v.$gray-dark;
+                    padding: 12px;
+                    border-radius: 16px;
+                }
+            }
+        }
+    }
+
+    &__visual {
+        max-width: 50%;
+        
+        &_column--left {
+            display: grid;
+            gap: 60px;
+
+            &:nth-child(2) {
+                align-self: flex-start;
+            }
+        }
+
+    }
+}
