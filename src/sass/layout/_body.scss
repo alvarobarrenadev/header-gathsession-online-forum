@@ -2,7 +2,7 @@
 
 body {
     background-color: v.$bg-dark-blue;
-    background-image: url('../img/ellipse-int-icon.png');
+    background-image: url('/img/ellipse-int-icon.png');
     background-repeat: no-repeat;
     background-position: bottom -12% right;
     background-size: 600px;
@@ -12,10 +12,9 @@ body {
         content: '';
         position: absolute;
         top: 5%;
-        left: 76px;
         width: 100%;
         height: 100%;
-        background-image: url('../img/ellipse-ext-icon.png');
+        background-image: url('/img/ellipse-ext-icon.png');
         background-repeat: no-repeat;
         background-position: top 100% right 0%;
         background-size: 900px;
