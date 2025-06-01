@@ -52,15 +52,56 @@
 
     &__visual {
         max-width: 50%;
-        
-        &_column--left {
-            display: grid;
-            gap: 60px;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 15px;
+        height: 640px;
 
-            &:nth-child(2) {
-                align-self: flex-start;
-            }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 25px;
+            overflow: hidden;
+            object-fit: cover;
         }
 
+        // Posicionamiento específico para cada imagen
+        .purple-man {
+            grid-column: 1;
+            grid-row: 1 / span 2;
+            border-radius: 60px;
+            background-color: #6e1fed;
+        }
+        
+        .blue-woman {
+            grid-column: 2;
+            grid-row: 1;
+            border-radius: 70px;
+            background-color: v.$blue-person;
+        }
+        
+        .yellow-woman {
+            grid-column: 3;
+            grid-row: 1 / span 3;
+            border-radius: 60px;
+            background-color: v.$yellow-person;
+            place-self: center; // Centra tanto horizontal como vertical (como align-self en flexbox)
+        }
+        
+        .pink-woman {
+            grid-column: 1;
+            grid-row: 3;
+            border-radius: 70px;
+            background-color: v.$pink;
+        }
+        
+        .orange-man {
+            grid-column: 2;
+            grid-row: 2 / span 2;
+            border-radius: 60px;
+            background-color: v.$orange-person;
+        }
     }
 }
