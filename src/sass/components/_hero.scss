@@ -65,9 +65,10 @@
             border-radius: 25px;
             overflow: hidden;
             object-fit: cover;
+            pointer-events: none; // Prevents images from being selectable.
         }
 
-        // Posicionamiento específico para cada imagen
+        // Specific positioning for each image
         .purple-man {
             grid-column: 1;
             grid-row: 1 / span 2;
